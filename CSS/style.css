@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+canvas{
+    width: 100%;
+    max-width: 270px;
+    height: 100%;
+    max-height: 270px;
+}
+
+#pdf{
+    /* background-color: #ccc; */
+    display: block; 
+    height: 630px; 
+    width: 1100px; 
+    padding: 30px;
+}
+
+.g-pizza{
+    position: relative;
+    top: -312px;
+    left: 120px;
+    text-align: center;
+}
+
+#media{
+    
+}
+
+h5{
+    font-weight: bold;
+    position: relative;
+    left: 130px;
+}
+
+.legendas{
+    position: relative;
+    top: 50px;
+    width: 600px;
+}
+
+.legendas > h4{
+    font-weight: bold;
+    margin-left: 200px;
+    display: inline-block;
+}
+
+.legendas > #media{
+    display: inline-block;
+    margin-left: 200px;
+}
+
+.legendas > ul{
+    position: relative;
+    left: 30px;
+    top: 0px;
+}
+
+.legendas > ul li{
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.legendas span{
+    font-weight: bold;
+}
+
+.form-notas{
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    margin-left: 500px;
+    margin-top: 20px;
+}
+
+.form-notas button{
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 10px;
+    display: block;
+    margin-left: 30%;
+    transform: translateX(-50%);
+}
+
+.form-notas input{
+    margin-top: 5px;
+}
+
+
+#chart {
+    top: 15px;
+    width: 350px;
+    height: 250px;
+    left: 80px;
+    border: 1px solid #ccc;
+    position: relative;
+  }
+
+
+
+  #bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    padding: 0 10px;
+  }
+
+  .bar {
+    width: 20px;
+    background-color: blue;
+    transition: height 0.5s;
+  }
+
+  #x-axis {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+  }
+
+  #y-axis {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    position: absolute;
+    left: -40px;
+    height: 100%;
+  }
+
+  .axis-label {
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    margin-bottom: 10px;
+  }
+
+  #notes-form {
+    top: -250px;
+    text-align: center;
+    position: relative;
+  }
+
+  #student-info input{
+    line-height: 22px;
+  }
+
+  #student-info input[type="text"] {
+    margin: 0 5px;
+  }
+
+  #pdf-button {
+    margin-top: 10px;
+  }

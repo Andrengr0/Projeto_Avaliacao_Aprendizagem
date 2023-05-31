@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gráfico de Pizza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+
+    <div id="pdf">
+
+        <div id="student-info">
+            <div>
+            <label for="student-name">Nome do Aluno:</label>
+            <input type="text" id="student-name" style="width: 50%;">
+            </div>
+
+            <div style="margin-top: 10px;">
+            <label for="student-id">Número de Matrícula:</label>
+            <input type="text" id="student-id" style="width: 16%;">
+            </div>
+
+            <div style="margin-top: 10px;">
+            <label for="course-name">Nome da Disciplina:</label>
+            <input type="text" id="course-name" style="width: 23%;">
+            </div>
+        </div>
+        
+        <div class="row" style="display: flex; width: 100%; max-width: 1000px; margin-top: 20px;">
+            <div class="coluna-1" style="width: 50%;">
+            <h5>Gráfico de Barras - Notas do aluno</h5>
+                <div id="chart">
+                    <div id="bars"></div>
+                    <div id="x-axis">
+                    <span>Nota 1</span>
+                    <span>Nota 2</span>
+                    <span>Nota 3</span>
+                    <span>Nota 4</span>
+                    <span>Nota 5</span>
+                    </div>
+                    <div id="y-axis" style="top: 0;">
+                    <span class="axis-label">0</span>
+                    <span class="axis-label">2</span>
+                    <span class="axis-label">4</span>
+                    <span class="axis-label">6</span>
+                    <span class="axis-label">8</span>
+                    <span class="axis-label">10</span>
+                    </div>
+                </div>
+            </div><!-- coluna 1-->
+        
+
+
+
+        <div class="coluna-2" style="width: 50%; position: relative; top: 310px; left: -100px;">
+            <div class="g-pizza">
+                <h5 style="left: -150px; position: relative;">Gráfico de Pizza - Notas do Aluno</h5>
+                <div id="chartContainer">
+                    <canvas id="chart2"></canvas>
+                </div>
+            </div><!-- gpizza -->
+        </div><!-- coluna 2-->
+        </div><!-- row -->
+        <div class="legendas">
+            <h4>Legendas</h4><div id="media">Media = <span id="Smedia"></span></div>
+            <ul>
+                <li>Nota 1: O aluno descreve seu ponto de forma crítica, com riqueza de detalhes? <span id="Snota1"></span></li>
+                <li>Nota 2: O aluno realiza pesquisa acerca do assunto? <span id="Snota2"></span></li>
+                <li>Nota 3: O aluno age de maneira ética? <span id="Snota3"></span></li>
+                <li>Nota 4: O aluno tenta fazer seu trabalho com boa estética? <span id="Snota4"></span></li>
+                <li>Nota 5: O aluno demonstra curiosidade no assunto? faz perguntas? <span id="Snota5"></span></li>
+            </ul>
+        </div><!-- legendas -->
+    </div><!-- pdf -->
+
+  <form onsubmit="atualizarGrafico(event)" class="form-notas">
+    <label for="nota1">Nota 1:</label>
+    <input type="number" id="nota1" min="0" max="10" required><br>
+
+    <label for="nota2">Nota 2:</label>
+    <input type="number" id="nota2" min="0" max="10" required><br>
+
+    <label for="nota3">Nota 3:</label>
+    <input type="number" id="nota3" min="0" max="10" required><br>
+
+    <label for="nota4">Nota 4:</label>
+    <input type="number" id="nota4" min="0" max="10" required><br>
+
+    <label for="nota5">Nota 5:</label>
+    <input type="number" id="nota5" min="0" max="10" required><br>
+
+    <a href="" id="jpeg-link" download="grafico.jpg" style="display: none;"></a>
+    <button type="submit">Gerar gráficos</button>
+    <button id="jpeg-button" onclick="saveAsJPEG()" style="margin-bottom: 50px;">Salvar como JPEG</button>
+  </form>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="js/functions.js"></script>
+</body>
+</html>
