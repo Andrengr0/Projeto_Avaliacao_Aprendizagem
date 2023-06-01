@@ -312,8 +312,8 @@ function saveAsJPEG2() {
 
   // Cria um novo elemento de tela para renderizar a imagem
   var canvas = document.createElement("canvas");
-  canvas.width = 1800; // Largura aumentada para 1500px
-  canvas.height = 1500; // Altura aumentada para 1000px
+  canvas.width = 1800; 
+  canvas.height = 1500; 
 
   var context = canvas.getContext("2d");
   context.fillStyle = "#ffffff"; // Define o fundo branco
