@@ -30,9 +30,6 @@ canvas{
     text-align: center;
 }
 
-#media{
-    
-}
 
 h5{
     font-weight: bold;
@@ -75,9 +72,10 @@ h5{
 .form-notas{
     position: relative;
     width: 100%;
-    max-width: 200px;
-    margin-left: 500px;
+    max-width: 500px;
+    margin-left: 300px;
     margin-top: 20px;
+    text-align: center;
 }
 
 .form-notas button{
@@ -85,8 +83,13 @@ h5{
     padding-right: 8px;
     margin-top: 10px;
     display: block;
-    margin-left: 30%;
+    margin-left: 50%;
     transform: translateX(-50%);
+}
+
+.form-notas > .content_button_count_alunos{
+    position: relative;
+    left: -100px;
 }
 
 .form-notas input{

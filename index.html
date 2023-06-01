@@ -30,7 +30,7 @@
         
         <div class="row" style="display: flex; width: 100%; max-width: 1000px; margin-top: 20px;">
             <div class="coluna-1" style="width: 50%;">
-            <h5>Gráfico de Barras - Notas do aluno</h5>
+            <h5>Gráfico de Barras - Notas do aluno:</h5>
                 <div id="chart">
                     <div id="bars"></div>
                     <div id="x-axis">
@@ -51,17 +51,14 @@
                 </div>
             </div><!-- coluna 1-->
         
-
-
-
-        <div class="coluna-2" style="width: 50%; position: relative; top: 310px; left: -100px;">
-            <div class="g-pizza">
-                <h5 style="left: -150px; position: relative;">Gráfico de Pizza - Notas do Aluno</h5>
-                <div id="chartContainer">
-                    <canvas id="chart2"></canvas>
-                </div>
-            </div><!-- gpizza -->
-        </div><!-- coluna 2-->
+            <div class="coluna-2" style="width: 50%; position: relative; top: 310px; left: -100px;">
+                <div class="g-pizza">
+                    <h5 style="left: -150px; position: relative;">Gráfico Pizza - notas dividas pela soma geral</h5>
+                    <div id="chartContainer">
+                        <canvas id="chart2"></canvas>
+                    </div>
+                </div><!-- gpizza -->
+            </div><!-- coluna 2-->
         </div><!-- row -->
         <div class="legendas">
             <h4>Legendas</h4><div id="media">Media = <span id="Smedia"></span></div>
@@ -74,6 +71,8 @@
             </ul>
         </div><!-- legendas -->
     </div><!-- pdf -->
+
+    
 
   <form onsubmit="atualizarGrafico(event)" class="form-notas">
     <label for="nota1">Nota 1:</label>
@@ -92,9 +91,23 @@
     <input type="number" id="nota5" min="0" max="10" required><br>
 
     <a href="" id="jpeg-link" download="grafico.jpg" style="display: none;"></a>
-    <button type="submit">Gerar gráficos</button>
-    <button id="jpeg-button" onclick="saveAsJPEG()" style="margin-bottom: 50px;">Salvar como JPEG</button>
+
+    <div class="content_button_count_alunos"></div>
+        <div style="display: inline-block;">Alunos cadastrados: <span id="count_alunos" style="font-weight: bold;">0</span></div>
+        <button id="gerar_grafico" type="submit" style="display: inline-block; margin-left: 90px;">Gerar gráficos</button>
+    <!-- content_button_count_alunos -->
+    <button id="jpeg-button" onclick="saveAsJPEG();return false" style="margin-bottom: 50px;">Salvar como JPEG</button>
+    <button onclick="gerarGraficoTurma();return false">Gerar Gráfico da Turma</button>
   </form>
+
+  <div id="pdf2" class="pdf2">
+    <h5>Gráfico de Pizza - Média geral da turma:</h5>
+    <div id="chartContainer2">
+        <canvas id="chart3"></canvas>
+    </div>
+  </div><!-- gpizza -->
+  <a href="" id="jpeg-link2" download="grafico.jpg" style="display: none;"></a>
+  <button id="jpeg-button2" onclick="saveAsJPEG2();return false" style="margin-bottom: 50px;">Salvar como JPEG</button>
 
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script src="js/functions.js"></script>
