@@ -190,9 +190,6 @@ function atualizarGrafico(event) {
       return false;
 }
 
-
-
-
 function gerarGraficoTurma(){
     // console.log(notas);
 
@@ -225,7 +222,6 @@ function gerarGraficoTurma(){
     }
 
     var qtdAlunos = notas.length;
-
     mediaGeral_1 = (somaGeral_1 / qtdAlunos);
     mediaGeral_2 = (somaGeral_2 / qtdAlunos);
     mediaGeral_3 = (somaGeral_3 / qtdAlunos);
@@ -233,13 +229,11 @@ function gerarGraficoTurma(){
     mediaGeral_5 = (somaGeral_5 / qtdAlunos);
 
     var somaMediaGeral = (mediaGeral_1 + mediaGeral_2 + mediaGeral_3 + mediaGeral_4 + mediaGeral_5);
-
     Pmediag1 =((mediaGeral_1 / somaMediaGeral) * 100).toFixed(1);
     Pmediag2 = ((mediaGeral_2 / somaMediaGeral) * 100).toFixed(1);
     Pmediag3 = ((mediaGeral_3 / somaMediaGeral) * 100).toFixed(1);
     Pmediag4 = ((mediaGeral_4 / somaMediaGeral) * 100).toFixed(1);
     Pmediag5 = ((mediaGeral_5 / somaMediaGeral) * 100).toFixed(1);
-
 
     // Atualize o gráfico de pizza
   var valores = [Pmediag1, Pmediag2, Pmediag3, Pmediag4, Pmediag5];
@@ -248,9 +242,6 @@ function gerarGraficoTurma(){
   if (chart3) {
     chart3.destroy();
   }
-
-  //Notas convertidas para 2 casas
-
 
   var ctx = document.getElementById('chart3').getContext('2d');
   chart3 = new Chart(ctx, {
@@ -271,15 +262,12 @@ function gerarGraficoTurma(){
     }
   }); 
 
-
     // grafico de barras geral da turma
     var chartv2 = document.getElementById("chartv2");
     var bars2 = document.getElementById("bars2");
 
     bars2.innerHTML = ""; // Limpa as barras existentes
-
     var notes = [mediaGeral_1, mediaGeral_2, mediaGeral_3, mediaGeral_4, mediaGeral_5];
-
     for (var i = 0; i < notes.length; i++) {
       var bar = document.createElement("div");
       bar.className = "bar";
@@ -289,9 +277,10 @@ function gerarGraficoTurma(){
 
     // Edita o elemento de data nos graficos gerais da turma
     var data = document.getElementById("date-id");
-    var getData = data.value;
+    let data_americana = data.value;
+    let data_brasileira = data_americana.split('-').reverse().join('/');
     var Sdate = document.getElementById("Sdate");
-    Sdate.innerText = getData;
+    Sdate.innerText = data_brasileira;
 
     // Edita o valor da Media geral nos graficos da turma
     var SmediaGeral = document.getElementById("SmediaGeral");
@@ -302,9 +291,6 @@ function gerarGraficoTurma(){
     var Sdisciplina = document.getElementById("Sdisciplina");
     Sdisciplina.innerText = document.getElementById("course-name").value;
   }
-
-
-
 
 
 function saveAsJPEG2() {

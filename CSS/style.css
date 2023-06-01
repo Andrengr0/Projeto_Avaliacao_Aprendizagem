@@ -187,6 +187,7 @@ h5{
 
   #student-info input{
     line-height: 22px;
+    padding-left: 4px;
   }
 
   #student-info input[type="text"] {
