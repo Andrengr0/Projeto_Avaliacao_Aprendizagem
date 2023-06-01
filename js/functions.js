@@ -272,7 +272,7 @@ function gerarGraficoTurma(){
   }); 
 
 
-
+    // grafico de barras geral da turma
     var chartv2 = document.getElementById("chartv2");
     var bars2 = document.getElementById("bars2");
 
@@ -287,10 +287,20 @@ function gerarGraficoTurma(){
       bars2.appendChild(bar);
     }
 
+    // Edita o elemento de data nos graficos gerais da turma
     var data = document.getElementById("date-id");
     var getData = data.value;
     var Sdate = document.getElementById("Sdate");
     Sdate.innerText = getData;
+
+    // Edita o valor da Media geral nos graficos da turma
+    var SmediaGeral = document.getElementById("SmediaGeral");
+    var mediaTotalGeral = (somaMediaGeral / 5).toFixed(1);
+    SmediaGeral.innerText = mediaTotalGeral;
+
+    // Edita a disciplina no campo dos graficos gerais
+    var Sdisciplina = document.getElementById("Sdisciplina");
+    Sdisciplina.innerText = document.getElementById("course-name").value;
   }
 
 
