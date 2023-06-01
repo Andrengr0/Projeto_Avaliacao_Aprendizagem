@@ -74,17 +74,30 @@ h5{
     width: 100%;
     max-width: 500px;
     margin-left: 300px;
-    margin-top: 20px;
+    top: 30px;
     text-align: center;
 }
 
 .form-notas button{
     padding-left: 8px;
     padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     margin-top: 10px;
     display: block;
     margin-left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#jpeg-button2{
+    margin-top: 15px;
+    margin-left: 38%;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
 }
 
 .form-notas > .content_button_count_alunos{
@@ -96,6 +109,15 @@ h5{
     margin-top: 5px;
 }
 
+.form-notas > .content-select{
+    margin-top: 5px;
+}
+.content-select select{
+    padding: 3px;
+}
+.content-select option{
+    font-size: 15px;
+}
 
 #chart {
     top: 15px;

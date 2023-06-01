@@ -2,17 +2,23 @@ var chart2;
 var chart3;
 var notas = [];
 var countAlunos = 0;
-Scount_alunos = document.getElementById("count_alunos");
+var Scount_alunos = document.getElementById("count_alunos");
 
 function atualizarGrafico(event) {
   event.preventDefault();
 
-  // Obtenha os valores do formulário
-  var nota1 = parseFloat(document.getElementById('nota1').value);
-  var nota2 = parseFloat(document.getElementById('nota2').value);
-  var nota3 = parseFloat(document.getElementById('nota3').value);
-  var nota4 = parseFloat(document.getElementById('nota4').value);
-  var nota5 = parseFloat(document.getElementById('nota5').value);
+  // Obtem os valores do formulário
+  var select1 = document.getElementById("nota1");
+  var select2 = document.getElementById("nota2");
+  var select3 = document.getElementById("nota3");
+  var select4 = document.getElementById("nota4");
+  var select5 = document.getElementById("nota5");
+
+  var nota1 = parseFloat(select1.options[select1.selectedIndex].value);
+  var nota2 = parseFloat(select2.options[select2.selectedIndex].value);
+  var nota3 = parseFloat(select3.options[select3.selectedIndex].value);
+  var nota4 = parseFloat(select4.options[select4.selectedIndex].value);
+  var nota5 = parseFloat(select5.options[select5.selectedIndex].value);
 
 
   var notas_aluno = [];
@@ -34,7 +40,7 @@ function atualizarGrafico(event) {
     return;
   }
 
-  // Verifique se a soma das notas é 100
+
   var soma = nota1 + nota2 + nota3 + nota4 + nota5;
 
   var media = soma / 5;
@@ -84,14 +90,18 @@ function atualizarGrafico(event) {
   });
 
 
+    // Obtem os valores do formulário
+  var select1 = document.getElementById("nota1");
+  var select2 = document.getElementById("nota2");
+  var select3 = document.getElementById("nota3");
+  var select4 = document.getElementById("nota4");
+  var select5 = document.getElementById("nota5");
 
-
-
-    var note1 = parseInt(document.getElementById("nota1").value);
-    var note2 = parseInt(document.getElementById("nota2").value);
-    var note3 = parseInt(document.getElementById("nota3").value);
-    var note4 = parseInt(document.getElementById("nota4").value);
-    var note5 = parseInt(document.getElementById("nota5").value);
+  var note1 = parseInt(select1.options[select1.selectedIndex].value);
+  var note2 = parseInt(select2.options[select2.selectedIndex].value);
+  var note3 = parseInt(select3.options[select3.selectedIndex].value);
+  var note4 = parseInt(select4.options[select4.selectedIndex].value);
+  var note5 = parseInt(select5.options[select5.selectedIndex].value);
 
     var Snota1 = document.getElementById("Snota1");
     Snota1.innerText = "";

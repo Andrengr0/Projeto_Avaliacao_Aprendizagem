@@ -2,16 +2,16 @@
 <html>
 <head>
   <title>Indicadores Avaliativos</title>
-  <link rel="shortcut icon" type="image-x/png" href="images/icon-site.ico">
+  <link rel="shortcut icon" type="image-x/png" href="images/icone.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </head>
 <body>
-
     <div id="pdf">
-
         <div id="student-info">
             <div>
             <label for="student-name">Nome do Aluno:</label>
@@ -73,23 +73,88 @@
         </div><!-- legendas -->
     </div><!-- pdf -->
 
-    
 
   <form onsubmit="atualizarGrafico(event)" class="form-notas">
-    <label for="nota1">Nota 1:</label>
-    <input type="number" id="nota1" min="0" max="10" required><br>
-
-    <label for="nota2">Nota 2:</label>
-    <input type="number" id="nota2" min="0" max="10" required><br>
-
-    <label for="nota3">Nota 3:</label>
-    <input type="number" id="nota3" min="0" max="10" required><br>
-
-    <label for="nota4">Nota 4:</label>
-    <input type="number" id="nota4" min="0" max="10" required><br>
-
-    <label for="nota5">Nota 5:</label>
-    <input type="number" id="nota5" min="0" max="10" required><br>
+    <div class="content-select">
+        <label for="nota1">Nota 1:</label>
+        <select id="nota1" name="nota1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div><!-- content-select -->
+    <div class="content-select">
+        <label for="nota2">Nota 2:</label>
+        <select id="nota2" name="nota2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div><!-- content-select -->
+    <div class="content-select">
+        <label for="nota3">Nota 3:</label>
+        <select id="nota3" name="nota3">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div><!-- content-select -->
+    <div class="content-select">
+        <label for="nota4">Nota 4:</label>
+        <select id="nota4" name="nota4">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div><!-- content-select -->
+    <div class="content-select">
+        <label for="nota5">Nota 5:</label>
+        <select id="nota5" name="nota5">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div><!-- content-select -->
 
     <a href="" id="jpeg-link" download="grafico.jpg" style="display: none;"></a>
 
@@ -112,5 +177,6 @@
 
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script src="js/functions.js"></script>
+  <script src="js/functionsTeste.js"></script>
 </body>
 </html>
