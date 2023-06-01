@@ -21,6 +21,9 @@
             <div style="margin-top: 10px;">
             <label for="student-id">Número de Matrícula:</label>
             <input type="text" id="student-id" style="width: 16%;">
+
+            <label for="date-id" style="margin-left: 10px;">Data:</label>
+            <input type="date" id="date-id" style="width: 16%;">
             </div>
 
             <div style="margin-top: 10px;">
@@ -163,15 +166,43 @@
         <button id="gerar_grafico" type="submit" style="display: inline-block; margin-left: 90px;">Gerar gráficos</button>
     <!-- content_button_count_alunos -->
     <button id="jpeg-button" onclick="saveAsJPEG();return false" style="margin-bottom: 50px;">Salvar como JPEG</button>
-    <button onclick="gerarGraficoTurma();return false">Gerar Gráfico da Turma</button>
+    <button onclick="gerarGraficoTurma();return false">Gerar Gráficos da Turma</button>
   </form>
 
-  <div id="pdf2" class="pdf2">
-    <h5>Gráfico de Pizza - Média geral da turma:</h5>
-    <div id="chartContainer2">
-        <canvas id="chart3"></canvas>
-    </div>
-  </div><!-- gpizza -->
+    <div id="pdf2" class="pdf2">
+        <div class="row" style="display: flex; padding-top: 80px; padding-left: 20px;">
+            <div class="col1">
+                <h5>Gráfico de Barras - Notas do aluno:</h5>
+                    <div id="chartv2">
+                        <div id="bars2"></div>
+                        <div id="x-axis2">
+                        <span>Nota 1</span>
+                        <span>Nota 2</span>
+                        <span>Nota 3</span>
+                        <span>Nota 4</span>
+                        <span>Nota 5</span>
+                        </div>
+                        <div id="y-axis2" style="top: 0;">
+                        <span class="axis-label">0</span>
+                        <span class="axis-label">2</span>
+                        <span class="axis-label">4</span>
+                        <span class="axis-label">6</span>
+                        <span class="axis-label">8</span>
+                        <span class="axis-label">10</span>
+                        </div>
+                    </div><!-- chartv2 -->
+            </div><!-- col1 -->
+            <div class="col2" style="padding-left: 120px;">
+                <h5 style="position: relative; left: 15px;">Gráfico de Pizza - Média geral da turma:</h5>
+                <div id="chartContainer2">
+                    <canvas id="chart3"></canvas>
+                </div>
+                </div><!-- gpizza -->
+            </div><!-- col2 -->
+        </div><!-- row -->
+        <div>Data: <span id="Sdate"></span></div>
+    </div><!-- pdf2 -->
+
   <a href="" id="jpeg-link2" download="grafico.jpg" style="display: none;"></a>
   <button id="jpeg-button2" onclick="saveAsJPEG2();return false" style="margin-bottom: 50px;">Salvar como JPEG</button>
 

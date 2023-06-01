@@ -144,8 +144,8 @@ function atualizarGrafico(event) {
 
       // Cria um novo elemento de tela para renderizar a imagem
       var canvas = document.createElement("canvas");
-      canvas.width = 1500; // Largura aumentada para 1500px
-      canvas.height = 1100; // Altura aumentada para 1000px
+      canvas.width = 1800; // Largura aumentada para 1500px
+      canvas.height = 1500; // Altura aumentada para 1000px
 
       var context = canvas.getContext("2d");
       context.fillStyle = "#ffffff"; // Define o fundo branco
@@ -270,7 +270,29 @@ function gerarGraficoTurma(){
       }
     }
   }); 
-}
+
+
+
+    var chartv2 = document.getElementById("chartv2");
+    var bars2 = document.getElementById("bars2");
+
+    bars2.innerHTML = ""; // Limpa as barras existentes
+
+    var notes = [mediaGeral_1, mediaGeral_2, mediaGeral_3, mediaGeral_4, mediaGeral_5];
+
+    for (var i = 0; i < notes.length; i++) {
+      var bar = document.createElement("div");
+      bar.className = "bar";
+      bar.style.height = (notes[i] / 10) * 100 + "%";
+      bars2.appendChild(bar);
+    }
+
+    var data = document.getElementById("date-id");
+    var getData = data.value;
+    var Sdate = document.getElementById("Sdate");
+    Sdate.innerText = getData;
+  }
+
 
 
 
@@ -280,8 +302,8 @@ function saveAsJPEG2() {
 
   // Cria um novo elemento de tela para renderizar a imagem
   var canvas = document.createElement("canvas");
-  canvas.width = 1500; // Largura aumentada para 1500px
-  canvas.height = 1100; // Altura aumentada para 1000px
+  canvas.width = 1800; // Largura aumentada para 1500px
+  canvas.height = 1500; // Altura aumentada para 1000px
 
   var context = canvas.getContext("2d");
   context.fillStyle = "#ffffff"; // Define o fundo branco
